@@ -1,5 +1,5 @@
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    spacePlane.destroy(effects.fire, 100)
+    bogey.destroy(effects.fire, 100)
     info.changeScoreBy(1)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -26,8 +26,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     spacePlane.destroy()
     info.changeLifeBy(-1)
 })
-let bogey: Sprite = null
 let dart: Sprite = null
+let bogey: Sprite = null
 let spacePlane: Sprite = null
 spacePlane = sprites.create(img`
 . . . . . . . . . . . . . . . . 
